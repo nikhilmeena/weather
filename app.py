@@ -84,8 +84,8 @@ def index():
                         ),
                     }
          except Exception as e:
-               print(f"ERROR: {e}")
-               error = str(e)
+           print(f"ERROR: {e}")
+           error = str(e)
 
     return render_template("index.html", weather=weather, error=error, city=city)
 
