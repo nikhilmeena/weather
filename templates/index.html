@@ -7,29 +7,32 @@
   <style>
     :root {
       color-scheme: light;
-      --bg: #eef4fb;
-      --card: #ffffff;
+      --card: rgba(255, 255, 255, 0.88);
       --text: #1c2a3a;
-      --muted: #5b6b7c;
-      --accent: #2563eb;
+      --muted: #3d4d5e;
+      --accent: #1d4ed8;
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
       min-height: 100vh;
       font-family: Georgia, "Times New Roman", serif;
-      background: radial-gradient(circle at top, #dbeafe, var(--bg));
       color: var(--text);
       display: grid;
       place-items: center;
       padding: 24px;
+      background:
+        linear-gradient(180deg, rgba(12, 24, 36, 0.18), rgba(12, 24, 36, 0.35)),
+        url("{{ url_for('static', filename='nordic-landscape.png') }}") center / cover no-repeat fixed;
     }
     main {
       width: min(440px, 100%);
       background: var(--card);
+      backdrop-filter: blur(10px);
       border-radius: 16px;
       padding: 28px;
-      box-shadow: 0 12px 40px rgba(28, 42, 58, 0.12);
+      box-shadow: 0 16px 48px rgba(12, 24, 36, 0.28);
+      border: 1px solid rgba(255, 255, 255, 0.55);
     }
     h1 {
       margin: 0 0 8px;
