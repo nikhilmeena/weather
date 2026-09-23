@@ -83,8 +83,9 @@ def index():
                             current["weather_code"], "Unknown conditions"
                         ),
                     }
-            except requests.RequestException:
-                error = "Could not reach the weather service. Try again."
+            except Exception as e:
+              print(f"ERROR: {e}")
+               error = str(e)
 
     return render_template("index.html", weather=weather, error=error, city=city)
 
